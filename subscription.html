@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revenue Model</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+        header {
+            position: relative;
+            width: 100%;
+            padding: 20px;
+            background: navy;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav ul li input {
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        nav ul li button {
+            padding: 5px 10px;
+            border: none;
+            background: white;
+            color: black;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .card img {
+            width: 100px;
+            height: 100px;
+        }
+        
+        
+        .button{
+            position: relative;
+            display: inline;
+            background-color: lightgray;
+            color: black;
+            padding: 10px 20px;
+            margin: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .hero .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 1rem;
+      color: white;
+      background-color: #00bcd4;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+        .button:hover {
+            background-color: navy;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="g4presents.html">Home</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="payment.html">Payment</a></li>
+                <li><a href="subscription.html">Subscription</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li>
+                    <input type="text" placeholder="Search luxury services...">
+                    <button>Search</button>
+                </li>
+                <li>
+                    <a href="log in.html"><button class="">Log In</button></a>
+                    <a href="sign up.html"><button class="">Sign Up</button></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Revenue Model</h1>
+    
+    <div class="container">
+        <!-- Pay Per Service Section -->
+        <div class="card">
+            <h2>Pay Per Service</h2>
+            <p>Book concierge services on-demand without a subscription.</p>
+            <a href="booking.html"><button class="">Explore Services</button></a>
+        </div>
+        
+        <!-- Subscription Tiers -->
+        <div class="card">
+            <img src="https://th.bing.com/th/id/OIP.dH9iktWdc5dTQDN03L2EuAHaHa?rs=1&pid=ImgDetMain" alt="Gold Tier">
+            <h2>Gold Tier</h2>
+            <p><strong>$10000/yearly</strong></p>
+            <p><strong>$3000/monthly</strong></p>
+            <p>✔ Priority service<br>✔ Exclusive deals<br>✔ 24/7 Support</p>
+            <a href="payment.html"><button class="">Subscribe</button></a>
+        </div>
+        
+        <div class="card">
+            <img src="https://th.bing.com/th/id/OIP.q-aA3xVqev-Cq2gD6Qf2EAHaHa?w=198&h=198&c=7&r=0&o=5&dpr=1.6&pid=1.7" alt="Silver Tier">
+            <h2>Silver Tier</h2>
+            <p><strong>$8000/yearly</strong></p>
+            <p><strong>$2000/monthly</strong></p>
+            
+            <p>✔ Faster booking<br>✔ Special discounts<br>✔ Premium Support</p>
+            <a href="payment.html"><button class="">Subscribe</button></a>
+        </div>
+        
+        <div class="card">
+            <img src="https://th.bing.com/th/id/OIP.6iuu7i8PScpdtSheiXWbFAHaGO?w=193&h=180&c=7&r=0&o=5&dpr=1.6&pid=1.7"alt="Bronze tier">
+            <h2>Bronze Tier</h2>
+            <p><strong>$5000/yearly</strong></p>
+            <p><strong>$1000/monthly</strong></p>
+            <p>✔ Standard booking<br>✔ Regular discounts<br>✔ Basic Support</p>
+            <a href="payment.html"><button class="">Subscribe</button></a>
+
+
+
+
+
+
+
+                
+        </div>
+    </div>
+</body>
+</html>

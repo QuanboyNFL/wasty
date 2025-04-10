@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Luxury Concierge</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+         body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+        }
+        .about-content, .profile-section {
+    text-align: center;
+    margin: 30px;
+    padding: 30px;
+}
+
+.about-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-content li {
+    margin: 10px 0;
+    font-weight: bolder;
+}
+
+.profile-section {
+    background-color: #f4f4f4;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: navy;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: transparent;
+}
+header {
+            position: relative;
+            width: 100%;
+            padding: 20px;
+            background: navy;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li input {
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+        nav ul li button {
+            padding: 5px 10px;
+            border: none;
+            background: white;
+            color: black;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="g4presents.html">Home</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="payment.html">Payment</a></li>
+                <li><a href="subscription.html">Subscription</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            <li>
+            <input type="text" placeholder="Search luxury services...">
+            <button>Search</button>
+        </li>
+        <li>
+            <button id="sign-in">Log In</button>
+            <button id="sign-out">Sign Up</button>
+        </li>
+        </ul>
+        </nav>
+    </header>
+    <h1>Your Profile</h1>
+    <section class="profile-section">
+        <h2>Welcome, <span id="username">Godslove</span></h2>
+        <p>Email: <span id="user-email">godslovehinneh9@gmail.com</span></p>
+        <p>Subscription: <span id="user-subscription">GOLD</span></p>
+
+    
+          <h2>Booked Services</h2>
+          <ul id="bookingsList"></ul>
+        
+          <script>
+            const bookings = JSON.parse(localStorage.getItem("bookedServices") || "[]");
+            const list = document.getElementById("bookingsList");
+        
+            if (bookings.length === 0) {
+              list.innerHTML = "<li>No bookings yet.</li>";
+            } else {
+              bookings.forEach(({ service, bookingId }) => {
+                const li = document.createElement("li");
+                li.textContent = $,{service} - Booking ,ID; {bookingId};
+                list.appendChild(li);
+              });
+            }
+          </script>
+        
+        
+        <button onclick="logout()">Logout</button>
+    </section>
+
+    <script>
+        function logout() {
+            alert("You have been logged out.");
+            window.location.href = "index.html";
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+    });
+
+    
+
+    // Profile Logout
+    const logoutButton = document.querySelector("#logout-btn");
+    if (logoutButton) {
+        logoutButton.addEventListener("click", function () {
+            alert("Logging out...");
+            //redirect to the homepage
+            window.location.href = "g4presents.html";
+        });
+    }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Booking Successful</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(to bottom right, #e0f7fa, #f0f8ff);
+      text-align: center;
+      padding-top: 100px;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .card {
+      background: white;
+      max-width: 500px;
+      margin: auto;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 1.2s ease-out forwards;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      color: #28a745;
+      font-size: 2em;
+      animation: bounce 1.2s infinite alternate ease-in-out;
+    }
+
+    p {
+      font-size: 18px;
+      margin-top: 20px;
+      color: #333;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0px);
+      }
+      100% {
+        transform: translateY(-8px);
+      }
+    }
+
+    .falling {
+      position: fixed;
+      top: -50px;
+      font-size: 24px;
+      animation: fall linear infinite;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(120vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Flower & Emoji Animation -->
+  <script>
+    const emojis = ["🌸", "😂", "🌺", "💮", "🤣", "🌷"];
+    const count = 25;
+
+    for (let i = 0; i < count; i++) {
+      const el = document.createElement("div");
+      el.className = "falling";
+      el.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+      el.style.left = Math.random() * 100 + "vw";
+      el.style.animationDuration = 4 + Math.random() * 3 + "s";
+      el.style.fontSize = 20 + Math.random() * 20 + "px";
+      document.body.appendChild(el);
+    }
+  </script>
+
+  <!-- Confirmation Card -->
+  <div class="card">
+    <h1>🎉 Payment Successful!</h1>
+    <p>
+      Thank you for working with us.<br>
+      Your booking has been confirmed successfully.
+    </p>
+    <p id="bookingDetails"></p>
+    <a href="profile.html">View My Profile</a>
+  </div>
+
+  <script>
+    const lastBooking = JSON.parse(localStorage.getItem("bookedServices") || "[]").slice(-1)[0];
+    if (lastBooking) {
+      document.getElementById("bookingDetails").innerHTML =
+        `Service: <strong>${lastBooking.service}</strong><br>Booking ID: <strong>${lastBooking.bookingId}</strong>`;
+    }
+  </script>
+
+</body>
+</html>
