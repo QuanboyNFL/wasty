@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Luxury Services</title>
+    <style>
+        :root {
+            --primary: #1A1A1A;
+            --secondary: #F5F5F5;
+            --accent: #D4AF37;
+            --highlight: #8B4513;
+            --section-bg: #2D2D2D;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: var(--primary);
+            color: var(--secondary);
+            line-height: 1.6;
+        }
+
+        .navbar {
+            position: fixed;
+            width: 100%;
+            background: rgba(26, 26, 26, 0.97);
+            padding: 1rem 2rem;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .logo {
+            font-size: 2rem;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--secondary);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: var(--accent);
+            color: var(--primary);
+        }
+
+        section {
+            padding: 6rem 2rem;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: var(--section-bg);
+            margin: 2rem 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .section-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            background: rgba(45, 45, 45, 0.9);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid var(--accent);
+        }
+
+        .section-text {
+            padding: 2rem;
+        }
+
+        .section-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid var(--accent);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--highlight);
+            padding-bottom: 1rem;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        li:before {
+            content: "▸";
+            color: var(--highlight);
+            position: absolute;
+            left: 0;
+        }
+
+        #hero {
+            background: linear-gradient(135deg, rgba(26,26,26,0.9), rgba(42,42,42,0.9)),
+                        url('images/hero-bg.jpg') center/cover;
+            justify-content: center;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        #about .section-content {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer {
+            background: var(--section-bg);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .section-content {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">NEXUS</div>
+        <div class="nav-links">
+            <a href="#hero">Home</a>
+            <a href="#travel-management">Travel</a>
+            <a href="#event-curation">Events</a>
+            <a href="#hotel-reservations">Hotels</a>
+            <a href="#dining-experiences">Dining</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Elevated Lifestyle Management</h1>
+            <p>Premium Services for Discerning Clients</p>
+        </div>
+    </section>
+
+    <section id="travel-management">
+        <div class="section-content">
+            <img src="images/travel-services.jpg" alt="Luxury Travel" class="section-image">
+            <div class="section-text">
+                <h2>Travel Management</h2>
+                <ul>
+                    <li>Private Flight Bookings & Charter Services</li>
+                    <li>Luxury Accommodation Curation</li>
+                    <li>Personal Transportation Coordination</li>
+                    <li>VIP Airport Handling & Fast Tracking</li>
+                    <li>Custom Itinerary Development</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="event-curation">
+        <div class="section-content">
+            <div class="section-text">
+                <h2>Event & Experience Curation</h2>
+                <ul>
+                    <li>Destination Weddings & Social Galas</li>
+                    <li>Executive Corporate Retreats</li>
+                    <li>Exclusive Private Parties</li>
+                    <li>Celebrity Management Services</li>
+                    <li>Themed Experience Creation</li>
+                </ul>
+            </div>
+            <img src="images/event-services.jpg" alt="Luxury Events" class="section-image">
+        </div>
+    </section>
+
+    <section id="hotel-reservations">
+        <div class="section-content">
+            <img src="images/hotel-services.jpg" alt="Luxury Hotels" class="section-image">
+            <div class="section-text">
+                <h2>Hotel & Resort Services</h2>
+                <ul>
+                    <li>Five-Star Global Property Access</li>
+                    <li>Private Island Resort Bookings</li>
+                    <li>VIP Suite Upgrades & Amenities</li>
+                    <li>Boutique Hotel Partnerships</li>
+                    <li>Concierge Service Integration</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="dining-experiences">
+        <div class="section-content">
+            <div class="section-text">
+                <h2>Culinary Experiences</h2>
+                <ul>
+                    <li>Michelin-Star Restaurant Access</li>
+                    <li>Private Chef Experiences</li>
+                    <li>Exclusive Club Reservations</li>
+                    <li>Themed Dining Events</li>
+                    <li>VIP Show & Entertainment Packages</li>
+                </ul>
+            </div>
+            <img src="images/dining-services.jpg" alt="Fine Dining" class="section-image">
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="section-content">
+            <div class="section-text">
+                <h2>About Us</h2>
+                <p>For over a decade, Nexus Luxury Services has redefined premium lifestyle management through meticulous attention to detail and unparalleled access to global luxury resources.</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Headquarters</h4>
+                            <p>888 Luxury Avenue<br>Monaco, MC 98000</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Contact</h4>
+                            <p>+1 (555) 123-4567<br>+44 (0)20 1234 5678</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">✉</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>concierge@nexusluxury.com<br>support@nexusluxury.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="images/about-map.jpg" alt="Our Location" class="section-image">
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h4>Nexus Luxury Services</h4>
+                <p>Elevating Experiences Since 2010</p>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>+1 (555) 123-4567<br>concierge@nexusluxury.com</p>
+            </div>
+            <div>
+                <h4>Monaco Headquarters</h4>
+                <p>888 Luxury Avenue<br>MC 98000 Monaco</p>
+            </div>
+        </div>
+        <p style="margin-top: 2rem;">© 2023 Nexus Luxury Services. All rights reserved.</p>
+    </footer>
+</body>
+</html>
